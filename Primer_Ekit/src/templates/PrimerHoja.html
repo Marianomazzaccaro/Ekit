@@ -1,0 +1,222 @@
+---
+
+---
+
+<extends src="src/layouts/main.html">
+  <block name="template">    
+    <table class="w-full wrapper all:font-roboto">
+      <tr>
+        <td class="grid place-items-center">
+            <table class="bg-white w-600 px-28">
+              <!-- INICIO EMISION-BUEN VIAJE -->
+              <td>
+                <table class="w-full mb-6">
+                    <tr>
+                      <td class="w-10/12 pt-12 pr-117">
+                        <span class="text-xs font-bold font-sans-arial">FECHA DE EMISIÓN</span>
+                        <span class="text-xs font-sans-arial"> ${TransactionDate }$</span>                       
+                        <hr class="border-0 bg-gray-300 text-gray-500 h-px mt-0">
+                        <span CLASS="text-red-600 font-bold text-base pb-2 font-sans-arial">Tu Assist Card</span>
+                        <p class="text-xs mt-2 mb-0 font-sans-arial" >Hola ${RecipientName }$, aquí encontrarás información sobre los servicios 
+                          contratados y cómo proceder en caso de necesitar asistencia. </p>
+                        <p class="text-xs font-semibold mt-0 mb-0 font-sans-arial">!Te deseamos buen viaje!</p>
+                      </td>
+                      <td class="w-2/12 pl-20">
+                        <img src="/images/Logo_AC.png" class="w-90" alt="">
+                        <!-- <img src="https://ecommerceapi.assistcard.com/Api/ImagesHandler/GetImage?freeImageCode=logo-claim-es" alt="ASSIST CARD"> -->
+                      </td>              
+                    </tr>            
+                 </table>
+              </td>
+              <!-- FIN EMISION-BUEN VIAJE -->  
+              <!-- INICIO VIAJERO+DETALLE -->             
+              <tr>
+                <td class="w-full">
+                    <table class="w-full pt-8">
+                        <tr>
+                            <td class="w-46 h-12 bg-gray-300">
+                              <table class="w-full ">
+                                  <tr class="">
+                                      <td class="">
+                                          <table class="w-full">
+                                                  <tr class="">
+                                                      <td class="">
+                                                          <h4 class="mt-0 mb-0">
+                                                              <span class="block font-normal text-base font-sans-arial ">
+                                                                      {Logica-VIAJERO/A }$
+                                                              </span>
+                                                              <span class="block text-base font-sans-arial">
+                                                                {Logica-Surname }$
+                                                              </span>
+                                                          </h4>
+                                                      </td>
+                                                  </tr>
+                                          </table> 
+                                      </td>
+                                  </tr>
+                              </table>
+                          </td>
+                            <td class="w-68 pl-4">                               
+                                <table class="w-full">
+                                    <tr class="">
+                                        <td class="px-10 container-border-top-bottom container-border-left">
+                                            <h4 class="m-0 text-xxs text-uppercase text-xs font-bold font-sans-arial pt-1">N° ASSIST CARD</h4>
+                                            <p class="m-0 pb-2 text-xs text-gray-700 pt-1 text-xs font-sans-arial">
+                                              {logica-voucher}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td class="px-10  container-border-left">
+                                            <h4 class="m-0 text-xxs text-uppercase text-xs font-bold font-sans-arial pt-1">VIGENCIA DEL SERVICIO</h4>
+                                            <p class="m-0 pb-2 text-xs text-gray-700 pt-1 text-xs font-sans-arial">
+                                              {logica-vigencia}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td class="px-10 container-border-top-bottom container-border-left">
+                                            <h4 class="m-0 text-xxs text-uppercase text-xs font-bold font-sans-arial pt-1">N° DE DOCUMENTO DE VIAJE</h4>
+                                            <p class="m-0 pb-2 text-xs text-gray-700 text-uppercase pt-1 text-xs font-sans-arial">
+                                              ${PaxPassport }$
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="w-68">                               
+                              <table class="w-full ">
+                                  <tr class="">
+                                      <td class="px-10 container-border ">
+                                          <h4 class="m-0 text-xxs text-uppercase text-xs font-bold font-sans-arial pt-1">PRODUCTO</h4>
+                                          <p class="m-0 pb-2 text-xs text-gray-700 pt-1 text-xs font-sans-arial">
+                                            ${ProductName}$
+                                          </p>
+                                      </td>
+                                  </tr>
+                                  <tr class="">
+                                      <td class="px-10 container-border-left container-border-right">
+                                          <h4 class="m-0 text-xxs text-uppercase text-xs font-bold font-sans-arial pt-1">MODALIDAD</h4>
+                                          <p class="m-0 pb-2 text-xs text-gray-700 pt-1 text-xs font-sans-arial">
+                                            ${Modalidad}$
+                                          </p>
+                                      </td>
+                                  </tr>
+                                  <tr class="">
+                                      <td class="px-10 container-border">
+                                          <h4 class="m-0 text-xxs text-uppercase text-xs font-bold font-sans-arial pt-1">COBERTURA HASTA</h4>
+                                          <p class="m-0 pb-2 text-xs text-gray-700 text-uppercase pt-1 text-xs font-sans-arial">
+                                            ${ClauseC4 }$
+                                          </p>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </td>
+                        </tr>
+                    </table>
+                </td>
+              </tr>
+              <!-- FIN VIAJERO+DETALLE -->
+              <!-- INICIO MSJ COVID -->
+              <tr>
+              <td>
+                <table class="mt-8 w-545">
+                   <tr class="bg-gray-300">
+                     <td class="px-2" >
+                     <h4 class="text-black-400 my-0 text-xs font-bold ">COVID-19 INCLUIDO</h4>
+                     <p class="my-3 text-xs">Tu producto cuenta con asistencia médica ante diagnóstico positivo de COVID-19, hasta el monto 
+                       máximo de cobertura del producto adquirido. Para mayor información te invitamos a consultar las 
+                       condiciones generales y particulares adjuntas.</p>
+                     </td>
+                   </tr>
+                 </table> 
+               </td>
+              </tr>
+             <!-- FIN MSJ COVID -->
+              <!-- INICIO BENEFICIOS ADICIONALES -->              
+            <tr>
+              <td> 
+                <h3 class="mb-4 mt-10 text-xs font-bold">Beneficios adicionales incluidos</h3>
+              </td>
+            </tr>
+            <td>
+            <table>
+              <tr>
+                <td>
+                  <div class="w-544 ">
+                  <div class="w-154 mt-2 mr-6 inline-block ">
+                    <table class="container-border rounded">
+                      <td class="mb-2 pl-4  ">
+                          <span class="mt-0 text-xss text-red-600 font-bold">{logica icono}</span>
+                          <span class="mt-0 text-xss text-red-600 font-bold">Covid Extra</span>
+                      </td>
+                      <tr class="">
+                         <td class=" pl-4">
+                            <p class="text-xsss m-0  mb-2 mt-6 ">Categoría</p> 
+                            <p class="text-xsss font-bold m-0 mb-2">{logica xxx}</p> 
+                         </td>
+                         <td class="pr-4 ">
+                            <p class="text-xsss m-0 mt-4">Emisión </p>
+                            <p class="text-xsss font-bold m-0">{logica xxx}</p> 
+                         </td>                     
+                      </tr>
+                      <tr>
+                         <td class="pl-4 -4">
+                            <p class="text-xsss m-0 mb-2 mt-6">Vigencia</p> 
+                            <p class="text-xsss font-bold m-0 pb-3"> {logica xxx} (incl.)</p>                                    
+                         </td>
+                      </tr>                        
+                  </table> 
+                  </div>
+                  
+                </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+            <!-- FIN BENEFICIOS ADICIONALES -->                        
+            <!-- INICIO QR+AUMENTO COBERTURA-->
+             <tr>
+               <td class="pt-20 mb-80 pb-250">
+                 <table>
+                 <tr>
+                    <td class="pr-32">
+                     <span>{qr}</span>
+                    </td>
+                    <td class="pl-0">
+                       <p class="m-0">
+                         <span class="font-bold text-xs">¡Todavía estás a tiempo de aumentar tu cobertura!</span>
+                         <p class="m-0 text-xs">Accede a nuestra web para ver todos los beneficios disponibles para tu viaje escaneando el
+                          código QR o haciendo <a class="text-green-600" href=""> click aquí</a>.</p> 
+                       </p>
+                      </td>
+                  </tr>
+                </table>
+               </td>
+             </tr>  
+              <!-- FIN QR+AUMENTO COBERTURA--> 
+              <!-- INICIO FOOTER-->
+             <tr>
+              <td class="pt-20 pb-80">
+                <table class="container-border w-544 px-10 py-10" >
+                <tr>
+                   <td>
+                    <img src="/images/1x/Recurso 1.png" class="pr-10 pl-10" alt="">
+                   </td>
+                   <td>                   
+                       <p class="text-xss m-0 pb-1">- Confirma tus datos y accede a las condiciones generales en <a class="text-green-600" href="">my.assistcard.com</a>.</p>
+                       <p class="text-xss m-0 pb-1">- Descarga e imprime la condiciones particulares adjuntas de tu producto. Encuéntralas en inglés y portugués en la app.</p>
+                       <p class="text-xss m-0">- Si viajas a USA, antes de ir a una sala de emergencia de un hospital es esencial que te comuniques con nosotros.</p>
+                     </td>
+                 </tr>
+               </table>
+              </td>
+            </tr>  
+             <!-- FIN FOOTER--> 
+            </table>       
+        </td>                
+      </tr>                
+    </table>      
+  </block>
+</extends>
+ 

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <meta charset="utf-8">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings xmlns:o="urn:schemas-microsoft-com:office:office">
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <style>
+    td,th,div,p,a,h1,h2,h3,h4,h5,h6 {font-family: "Segoe UI", sans-serif; mso-line-height-rule: exactly;}
+  </style>
+  <![endif]-->
+</head>
+<body style="margin: 0; width: 100%; padding: 0; word-break: break-word; -webkit-font-smoothing: antialiased;">
+  <div role="article" aria-roledescription="email" aria-label="" lang="en">    <table style="width: 100%;" cellpadding="0" cellspacing="0" role="presentation">
+      <tr>
+        <td style="display: grid; place-items: center; background-color: #a0aec0; padding-top: 32px; padding-bottom: 32px;">
+            <table style="width: 600px; background-color: #ffffff;" cellpadding="0" cellspacing="0" role="presentation"> <td>
+                <table style="width: 100%;" cellpadding="0" cellspacing="0" role="presentation">
+                    <tr>
+                      <td style="width: 83.333333%; padding-top: 12px;">
+                        <span style="padding-bottom: 0; font-size: 10px; font-weight: 700;">FECHA DE EMISIÓN</span>
+                        <span style="font-size: 10px;"> ${TransactionDate }$</span>
+                        <hr style="height: 1px; border-width: 0; background-color: #a0aec0; color: #a0aec0;">
+                        <p style="color: #e53e3e;">Tu Assist Card</p>
+                        <span>Hola ${RecipientName }$, aquí encontrarás información sobre los servicios
+                          contratados y cómo proceder en caso de necesitar asistencia. </span>
+                        <p>!Te deseamos buen viaje!</p>
+                      </td>
+                      <td style="width: 16.666667%;">
+                        <img src="https://ecommerceapi.assistcard.com/Api/ImagesHandler/GetImage?freeImageCode=logo-claim-es" alt="ASSIST CARD" style="max-width: 100%; vertical-align: middle; line-height: 100%; border: 0;">
+                      </td>
+                    </tr>
+                 </table>
+              </td> <tr>
+                <td style="width: 100%;">
+                    <table style="width: 100%;" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                            <td>
+                              <table style="width: 100%;" cellpadding="0" cellspacing="0" role="presentation">
+                                  <tr>
+                                      <td>
+                                          <table style="width: 100%;" cellpadding="0" cellspacing="0" role="presentation">
+                                                  <tr>
+                                                      <td>
+                                                          <h4>
+                                                              <span style="display: block; font-weight: 400;">
+                                                                  {% raw %}
+                                                                      ${RecipientName }$
+                                                                  {% endraw %}
+                                                              </span>
+                                                              <span style="display: block;">
+                                                                  {% raw %}
+                                                                      ${RecipientSurname }$
+                                                                  {% endraw %}
+                                                              </span>
+                                                          </h4>
+                                                      </td>
+                                                  </tr>
+                                          </table>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </td>
+                            <td>
+                                <table style="width: 100%;" cellpadding="0" cellspacing="0" role="presentation">
+                                    <tr>
+                                        <td style="padding-left: 10px; padding-right: 10px;">
+                                            <h4>N° ASSIST CARD</h4>
+                                            <p style="font-size: 10px; color: #4a4a4a;">
+                                              ${CompleteVoucherCode}$ /  ${Version}$
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left: 10px; padding-right: 10px;">
+                                            <h4>VIGENCIA DEL SERVICIO</h4>
+                                            <p style="font-size: 10px; color: #4a4a4a;">
+                                              ${ServiceStartDate}$  ${ServiceEndDate}$ inclusive.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left: 10px; padding-right: 10px;">
+                                            <h4>N° DE DOCUMENTO DE VIAJE</h4>
+                                            <p style="font-size: 10px; color: #4a4a4a;">
+                                              ${PaxPassport }$
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                              <table style="width: 100%;" cellpadding="0" cellspacing="0" role="presentation">
+                                  <tr>
+                                      <td style="padding-left: 10px; padding-right: 10px;">
+                                          <h4>PRODUCTO</h4>
+                                          <p style="font-size: 10px; color: #4a4a4a;">
+                                            ${ProductName}$
+                                          </p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td style="padding-left: 10px; padding-right: 10px;">
+                                          <h4>MODALIDAD</h4>
+                                          <p style="font-size: 10px; color: #4a4a4a;">
+                                            ${Modalidad}$
+                                          </p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td style="padding-left: 10px; padding-right: 10px;">
+                                          <h4>COBERTURA HASTA</h4>
+                                          <p style="font-size: 10px; color: #4a4a4a;">
+                                            ${ClauseC4 }$
+                                          </p>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </td>
+                        </tr>
+                    </table>
+                </td>
+              </tr> <tr style="background-color: #6ee7b7;">
+                <td>
+                <h4>COVID INCLUIDO</h4>
+                <p>Tu producto cuenta con asistencia médica ante diagnóstico positivo de COVID-19, hasta el monto
+                  máximo de cobertura del producto adquirido. Para mayor información te invitamos a consultar las
+                  condiciones generales y particulares adjuntas.</p>
+                </td>
+              </tr> <tr>
+                  <td>
+                    <table style="width: 25%;" cellpadding="0" cellspacing="0" role="presentation">
+                      <tr>
+                        <h3>Beneficios adicionales incluidos</h3>
+                        <td style="border-style: solid;">
+                          <table style="width: 100%;" cellpadding="0" cellspacing="0" role="presentation">
+                              <td>
+                                  <h4 style="text-align: left;"> {logica icono} Covid Extra</h4>
+                              </td>
+                              <tr>
+                                 <td>
+                                    <span>Categoría {logica xxx}</span>
+                                 </td>
+                                 <td>
+                                    <span>Emisión {logica xxx}</span>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <span>Vigencia {logica xxx} (incl.) </span>
+                                 </td>
+                              </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+            </tr> <tr>
+               <td style="padding-top: 20px;">
+                 <table cellpadding="0" cellspacing="0" role="presentation">
+                 <tr>
+                    <td>
+                     <span>{logica-qr}</span>
+                    </td>
+                    <td>
+                       <p>
+                        Todavía estás a tiempo de aumentar tu cobertura!
+                        Accede a nuestra web para ver todos los beneficios disponibles para tu viaje escaneando el
+                        código QR o haciendo click aquí
+                       </p>
+                      </td>
+                  </tr>
+                </table>
+               </td>
+             </tr> <tr>
+              <td style="padding-top: 20px;">
+                <table cellpadding="0" cellspacing="0" role="presentation">
+                <tr>
+                   <td>
+                    <span>{logo-signo-exclamacion}</span>
+                   </td>
+                   <td>
+                     <ul>
+                       <li> Confirma tus datos y accede a las condiciones generales en my.assistcard.com</li>
+                       <li> Descarga e imprime la condiciones particulares adjuntas de tu producto. Encuéntralas en inglés y portugués en la app.</li>
+                       <li> Si viajas a USA, antes de ir a una sala de emergencia de un hospital es esencial que te comuniques con nosotros.</li>
+                     </ul>
+                     </td>
+                 </tr>
+               </table>
+              </td>
+            </tr> </table>
+        </td>
+      </tr>
+    </table>        </div>
+</body>
+</html>
+
+<style>/* Your custom CSS resets for email */
+/*
+ * Here is where you can add your global email CSS resets.
+ *
+ * We use a custom, email-specific CSS reset, instead
+ * of Tailwind's web-optimized base.
+*/
+body{
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  word-break: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+img{
+  max-width: 100%;
+  vertical-align: middle;
+  line-height: 100%;
+  border: 0;
+}
+/* Tailwind components that are generated by plugins */
+@tailwind components;
+/**
+ * @import here any custom CSS components - that is, classes that
+ * you'd want loaded before the Tailwind utilities, so the
+ * utilities can still override them.
+*/
+/* Tailwind utility classes */
+@tailwind utilities;
+/* Your custom utility classes */
+/*
+ * Here is where you can define your custom utility classes.
+ *
+ * We wrap them in the `utilities` @layer directive, so
+ * that Tailwind moves them to the correct location.
+ *
+ * More info:
+ * https://tailwindcss.com/docs/functions-and-directives#layer
+*/
+.m-0{
+  margin: 0 !important;
+}
+.mb-16{
+  margin-bottom: 16px !important;
+}
+.mb-4{
+  margin-bottom: 4px !important;
+}
+.mb-24{
+  margin-bottom: 24px !important;
+}
+.block{
+  display: block !important;
+}
+.inline-block{
+  display: inline-block !important;
+}
+.table{
+  display: table !important;
+}
+.grid{
+  display: grid !important;
+}
+.hidden{
+  display: none !important;
+}
+.h-px{
+  height: 1px !important;
+}
+.h-32{
+  height: 32px !important;
+}
+.h-64{
+  height: 64px !important;
+}
+.h-48{
+  height: 48px !important;
+}
+.w-full{
+  width: 100% !important;
+}
+.w-600{
+  width: 600px !important;
+}
+.w-10\/12{
+  width: 83.333333% !important;
+}
+.w-2\/12{
+  width: 16.666667% !important;
+}
+.w-3\/12{
+  width: 25% !important;
+}
+.w-48{
+  width: 48px !important;
+}
+.w-1\/2{
+  width: 50% !important;
+}
+.max-w-full{
+  max-width: 100% !important;
+}
+.border-collapse{
+  border-collapse: collapse !important;
+}
+.cursor-default{
+  cursor: default !important;
+}
+.place-items-center{
+  place-items: center !important;
+}
+.rounded{
+  border-radius: 4px !important;
+}
+.border{
+  border-width: 1px !important;
+}
+.border-0{
+  border-width: 0 !important;
+}
+.border-solid{
+  border-style: solid !important;
+}
+.bg-gray-500{
+  background-color: #a0aec0 !important;
+}
+.bg-white{
+  background-color: #ffffff !important;
+}
+.bg-green-300{
+  background-color: #6ee7b7 !important;
+}
+.bg-gray-100{
+  background-color: #f5f5f5 !important;
+}
+.bg-indigo-800{
+  background-color: #3730a3 !important;
+}
+.bg-gray-300{
+  background-color: #e9e9e9 !important;
+}
+.bg-blue-500{
+  background-color: #3b82f6 !important;
+}
+.bg-gray-200{
+  background-color: #e7e7e7 !important;
+}
+.bg-cover{
+  background-size: cover !important;
+}
+.bg-top{
+  background-position: top !important;
+}
+.bg-no-repeat{
+  background-repeat: no-repeat !important;
+}
+.p-0{
+  padding: 0 !important;
+}
+.p-48{
+  padding: 48px !important;
+}
+.p-24{
+  padding: 24px !important;
+}
+.py-32{
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+.px-10{
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+.px-12{
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+.py-16{
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+.px-24{
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+.px-48{
+  padding-left: 48px !important;
+  padding-right: 48px !important;
+}
+.py-24{
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+.pt-12{
+  padding-top: 12px !important;
+}
+.pb-0{
+  padding-bottom: 0 !important;
+}
+.pt-20{
+  padding-top: 20px !important;
+}
+.pb-32{
+  padding-bottom: 32px !important;
+}
+.pr-16{
+  padding-right: 16px !important;
+}
+.pl-16{
+  padding-left: 16px !important;
+}
+.text-left{
+  text-align: left !important;
+}
+.text-center{
+  text-align: center !important;
+}
+.font-sans{
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif !important;
+}
+.text-xs{
+  font-size: 10px !important;
+}
+.text-4xl{
+  font-size: 36px !important;
+}
+.text-lg{
+  font-size: 18px !important;
+}
+.text-base{
+  font-size: 16px !important;
+}
+.text-sm{
+  font-size: 14px !important;
+}
+.text-2xl{
+  font-size: 24px !important;
+}
+.text-xl{
+  font-size: 20px !important;
+}
+.font-bold{
+  font-weight: 700 !important;
+}
+.font-normal{
+  font-weight: 400 !important;
+}
+.font-semibold{
+  font-weight: 600 !important;
+}
+.uppercase{
+  text-transform: uppercase !important;
+}
+.italic{
+  font-style: italic !important;
+}
+.leading-full{
+  line-height: 100% !important;
+}
+.leading-64{
+  line-height: 64px !important;
+}
+.leading-24{
+  line-height: 24px !important;
+}
+.leading-px{
+  line-height: 1px !important;
+}
+.text-gray-500{
+  color: #a0aec0 !important;
+}
+.text-red-600{
+  color: #e53e3e !important;
+}
+.text-gray-700{
+  color: #4a4a4a !important;
+}
+.text-white{
+  color: #ffffff !important;
+}
+.text-gray-800{
+  color: #2d3748 !important;
+}
+.text-blue-500{
+  color: #3b82f6 !important;
+}
+.text-black{
+  color: #000000 !important;
+}
+.text-gray-600{
+  color: #718096 !important;
+}
+.underline{
+  text-decoration: underline !important;
+}
+.no-underline{
+  text-decoration: none !important;
+}
+.mso-leading-exactly {
+    mso-line-height-rule: exactly !important;
+  }
+.hover\:bg-indigo-700:hover{
+  background-color: #4338ca !important;
+}
+.hover\:bg-blue-600:hover{
+  background-color: #2563eb !important;
+}
+.hover\:text-blue-400:hover{
+  color: #60a5fa !important;
+}
+.hover\:underline:hover{
+  text-decoration: underline !important;
+}
+.hover\:no-underline:hover{
+  text-decoration: none !important;
+}
+@media (max-width: 600px){
+  .sm\:inline-block{
+    display: inline-block !important;
+  }
+  .sm\:h-32{
+    height: 32px !important;
+  }
+  .sm\:w-full{
+    width: 100% !important;
+  }
+  .sm\:w-16{
+    width: 16px !important;
+  }
+  .sm\:px-16{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .sm\:py-32{
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+  .sm\:px-24{
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .sm\:px-0{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .sm\:pb-32{
+    padding-bottom: 32px !important;
+  }
+  .sm\:leading-40{
+    line-height: 40px !important;
+  }
+  .sm\:leading-32{
+    line-height: 32px !important;
+  }
+}</style>
